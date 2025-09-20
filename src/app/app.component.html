@@ -1,0 +1,33 @@
+<h2>{{ title }}</h2>
+<hr />
+
+<div class="container">
+
+  <div *ngFor="let movie of movies" class="movie-row">
+
+
+    <form class="movie-form">
+      <p>¿Cuántos boletos para {{ movie.name }}?</p>
+      <h3>{{ movie.name }}</h3>
+      <button type="button" (click)="removeMovieQuantity(movie.name)" [disabled]="movie.quantity <= 0">-</button>
+      {{ movie.quantity }}
+      <button type="button" (click)="addMovieQuantity(movie.name)" [disabled]="movie.quantity >= movie.available">+</button>
+    </form>
+
+    <img [src]="movie.image" alt="{{ movie.name }}" class="movie-img" />
+
+  </div>
+
+</div>
+
+
+<footer class="app-footer">
+  <div class="footer-container">
+    <p>&copy; 2025 CinePlus. Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Términos y condiciones</a> | 
+      <a href="#">Contacto</a>
+    </div>
+  </div>
+</footer>
