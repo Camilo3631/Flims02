@@ -1,0 +1,9 @@
+# Forzar a Linguist a reconocer ciertos archivos
+*.ts linguist-language=TypeScript
+*.js linguist-language=JavaScript
+*.css linguist-language=CSS
+*.html linguist-language=HTML
+
+# Ignorar archivos de build/dist
+dist/* linguist-vendored
+node_modules/* linguist-vendored
