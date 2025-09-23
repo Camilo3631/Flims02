@@ -19,7 +19,7 @@ type Movies = Array<Movie>;
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'Movies'; 
+  title: string =   'CinePlus'
     movies: Movies = [
       { name: 'Avengers', available: 3, quantity: 0, image: 'assets/avengers.jpg' },
       { name: 'El Correo de varsovia', available: 5, quantity: 0, image: 'assets/Correo.jpg' },

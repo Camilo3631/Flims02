@@ -1,60 +1,61 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: sans-serif;
-    color: #fff;
-    background-image: 
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('assets/popcorn-4885565_1280.jpg'); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  color: #fff;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('assets/popcorn-4885565_1280.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
+.wrapper {
+  min-height: 100vh;        /* ocupa toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;    /* columna para que container y footer estén apilados */
+}
 
-  .app-footer {
-    margin: 0;         /* Sin margen arriba/abajo */
-    padding: 20px 0;   /* Solo padding interno */
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 0.9rem;
-  }
-  
-  .app-footer a {
-    color: #d4213d;
-    text-decoration: none;
-    margin: 0 5px;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .app-footer a:hover {
-    color: #ff5c6e;
-  }
-  
-  .footer-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
+.container {
+  flex: 1;                   /* ocupa todo el espacio disponible, empujando el footer abajo */
+}
+
+/* Footer */
+.app-footer {
+  padding: 20px 0;
+  background-color: #222;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+header{
+  padding: 20px 0;
+  background-color: #222;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.footer-links a {
+  color: #d4213d;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #ff5c6e;
+}
+
+/* Responsive móvil */
+@media screen and (max-width: 480px) {
   .footer-links {
-    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
   }
-  
-  /* Responsive móvil */
-  @media screen and (max-width: 480px) {
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-top: 10px;
-    }
-  }
-  
-
-  
+}
